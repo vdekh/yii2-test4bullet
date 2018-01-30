@@ -1,0 +1,21 @@
+AddDefaultCharset UTF-8
+
+# Включаем отслеживание сим-ссылок
+Options +FollowSymLinks
+# Индексные страницы
+IndexIgnore */*
+# Запускаем url_rewriting
+RewriteEngine on
+
+# Если каталог или файла существуют - выдаем его напрямую ->
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# -> Иначе отправлять запрос на файл index.php
+RewriteRule . index.php [L]
+
+# В ряде случаев требуется выводить список файлов в каталоге (листинг каталога) в случае отсутствия в каталоге файла, который показывается по умолчанию.
+Options +Indexes
+# Устанавливает базовый URL для преобразований в контексте каталога
+RewriteBase /
+
+DirectoryIndex index.php index.html
