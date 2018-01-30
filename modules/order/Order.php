@@ -2,15 +2,17 @@
 
 namespace app\modules\order;
 
+use yii\base\Module;
+
 /**
  * order module definition class
  */
-class Order extends \yii\base\Module
+class Order extends Module
 {
     /**
      * @inheritdoc
      */
-    public $controllerNamespace = 'app\modeules\order\controllers';
+    public $controllerNamespace = 'app\modules\order\controllers';
 
     /**
      * @inheritdoc
