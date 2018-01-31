@@ -21,6 +21,7 @@ class m180130_202030_create_table_order_buyer extends Migration
             'name' => $this->string(255)->notNull(),
             'address' => $this->string(255)->notNull(),
             'inn' => $this->integer()->notNull(),
+            'kpp' => $this->integer()->notNull(),
             'checking_ac' => $this->bigInteger()->notNull(),
             'corresp_ac' => $this->bigInteger()->notNull(),
             'bik' => $this->integer()->notNull(),

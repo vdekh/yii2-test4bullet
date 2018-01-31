@@ -10,6 +10,6 @@ $this->title = 'My Yii Application';
     <div class="jumbotron">
         <h1>Привет!</h1>
 
-        <p><?= Html::a('Вставить свои реквизиты', ['order/default/add'], ['class'=>'btn btn-primary']) ?></p>
+        <p><?= Html::a('Введите свои реквизиты', ['order/default/form'], ['class'=>'btn btn-primary']) ?></p>
     </div>
 </div>

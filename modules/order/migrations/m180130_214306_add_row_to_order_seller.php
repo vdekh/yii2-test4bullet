@@ -3,11 +3,11 @@
 use yii\db\Migration;
 
 /**
- * Добавление одного продавца
+ * Добавление одного покупателя
  *
- * Class m180130_215306_add_row_to_order_buyer
+ * Class m180130_214306_add_row_to_order_seller
  */
-class m180130_215306_add_row_to_order_buyer extends Migration
+class m180130_214306_add_row_to_order_seller extends Migration
 {
     /**
      * @inheritdoc
@@ -15,7 +15,7 @@ class m180130_215306_add_row_to_order_buyer extends Migration
     public function safeUp()
     {
         $this->batchInsert(
-            'order_buyer',
+            'order_seller',
             [
                 'id',
                 'name',
@@ -48,6 +48,6 @@ class m180130_215306_add_row_to_order_buyer extends Migration
      */
     public function safeDown()
     {
-        $this->delete('order_buyer', ['in', 'id', [1]]);
+        $this->delete('order_seller', ['in', 'id', [1]]);
     }
 }

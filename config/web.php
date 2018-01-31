@@ -4,8 +4,10 @@ $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
 $config = [
-    'id' => 'basic',
+    'id' => 'yii2-test4bullet',
+    'name' => 'Yii2 Test for Bullet.bz',
     'basePath' => dirname(__DIR__),
+    'language' => 'ru-RU',
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -44,7 +46,7 @@ $config = [
             'suffix' => '',
             'rules' => [
                 '' => 'site/index',
-                'order/<_a:(add|show)>' => 'order/default/<_a>',
+                'order/<_a:(list|form|generation)>' => 'order/default/<_a>',
             ],
         ],
     ],
